@@ -1,20 +1,13 @@
 //your JS code here. If required.
-const checkboxes = document.querySelectorAll(".toggle")
-let selected = []
-checkboxes.forEach((checkBox) => {
-	checkBox.addEventListener("change", function () {
-		// const checked = document.querySelectorAll(".toggle:checked")
-		if(this.checked){
-			selected.push(this)
-		}
-		else{
-			selected = selected.filter( box => box !== this)
-		}
-		if(selected.length>2){
-			// let firstChecked = selected.shift(); 
-   //          firstChecked.checked = false;
-			selected[0].checked = false
-			selected.shift()
-		}
-	})
-})
+const checkboxes = document.querySelectorAll('.toggle');
+
+checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+        const checkedCheckboxes = Array.from(checkboxes).filter(checkbox => checkbox.checked);
+        
+        if (checkedCheckboxes.length > 2) {
+            // Uncheck the last checked checkbox
+            checkedCheckboxes[0].checked = false;
+        }
+    });
+});
