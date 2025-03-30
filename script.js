@@ -5,16 +5,16 @@ checkboxes.forEach((checkBox) => {
 	checkBox.addEventListener("change", function () {
 		// const checked = document.querySelectorAll(".toggle:checked")
 		if(this.checked){
-			if (!selected.includes(this)) {
-				     selected.push(this);
-		    }		
+			selected.push(this)
 		}
 		else{
 			selected = selected.filter( box => box !== this)
 		}
 		if(selected.length>2){
-			let firstChecked = selected.shift(); 
-            firstChecked.checked = false;
+			// let firstChecked = selected.shift(); 
+   //          firstChecked.checked = false;
+			selected[0].checked = false
+			selected.shift()
 		}
 	})
 })
