@@ -5,7 +5,9 @@ checkboxes.forEach((checkBox) => {
 	checkBox.addEventListener("change", function () {
 		// const checked = document.querySelectorAll(".toggle:checked")
 		if(this.checked){
-			selected.push(this)
+			if (!selected.includes(this)) {
+				     selected.push(this);
+		    }		
 		}
 		else{
 			selected = selected.filter( box => box !== this)
