@@ -1,7 +1,7 @@
 /*  your css code here. If applicable */
-.toggle-container{
+.g1, .g2, .g3{
     display: flex;
-	margin:10px
+	margin:10px;
 }
 .button{
     width: 50px;
