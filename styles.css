@@ -1,1 +1,31 @@
 /*  your css code here. If applicable */
+.container{
+    display: flex;
+}
+.button{
+    width: 50px;
+    height:25px;
+    background-color:grey;
+    border-radius:100px;
+    display:flex;
+    align-items:center;
+    transition:0.3s;
+}
+.slider{
+    width:22px;
+    height:22px;
+    background-color:white;
+    border-radius:50%;
+    position:absolute;
+    margin:2px;
+    transition:0.3s;
+}
+input:checked + .button{
+    background-color: purple;
+}
+input:checked + .button .slider{
+    transform: translateX(24px);
+}
+input{
+    display:none;
+}
