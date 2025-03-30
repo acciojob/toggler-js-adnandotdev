@@ -1,6 +1,7 @@
 /*  your css code here. If applicable */
-.container{
+.toggle-container{
     display: flex;
+	margin:10px
 }
 .button{
     width: 50px;
